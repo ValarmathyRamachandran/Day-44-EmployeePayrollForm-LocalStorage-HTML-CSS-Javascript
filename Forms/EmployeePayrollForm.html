@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="StyleSheet" href="D:\HTMLZip\assets-20211201T150711Z-001\assets\StyleSheet\EmpPayrollstyle.css">
+        <script type="text/javascript" src="../Javascript/EmployeePayrollData.js"></script>
+        <script type="text/javascript" src=" ../Javascript/EmployeePayrollForm.js"></script>
+        <title> Employee Payroll form </title> 
+    </head>
+    <body>
+
+      <!-- UC 1 -->
+        <header class="header-content header">
+            <div class="logo-content">
+                <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\images\logo.png" alt="logo">
+                <div>
+                    <span class="emp-text"> EMPLOYEE</span><br>
+                    <span class="emp-text emp-payroll"> PAYROLL</span>
+                </div>
+            </div>
+        </header>
+
+      <!-- UC 2 -->
+        <div class="form-content">
+            <form class="form" action="#" onsubmit="save()" onreset="resetForm()">
+                <div class="form-head" name="EmpPayrollForm" > Employee Payroll Form </div>
+                <div class="row-content">
+                    <label class="label text" for="name" >Name</label>
+                    <input class="input" type="text" id="name" name="name" placeholder="Please enter Your Name...." />
+                    <error-output class ="text-error" for="text" ></error-output></div><br>
+                    <!-- UC 3 -->
+                    <label class="label text" for="profileImage">Profile image</label> 
+                    <input class="radioinput" type ="radio" id="profileimages1" name="profileImage" value="1" >
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse -1.png"></label>
+                    <label><input class="radioinput" type ="radio" id="profileimages2" name="profileImage" value="2" >
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse -2.png"></label>
+                    <label><input class="radioinput" type ="radio" id="profileimages3" name="profileImage" value="3" >
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse -4.png"></label>
+                    <label><input class="radioinput" type ="radio" id="profileimages4" name="profileImage" value="4" >    
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse -5.png"></label>
+                    <!-- <label><input class="radioinput" type ="radio" id="profileimages" name="profileImage" value="5" >
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse 1.png"></label>
+                    <label><input class="radioinput" type ="radio" id="profileimages" name="profileImage" value="6" >
+                    <img src="D:\HTMLZip\assets-20211201T150711Z-001\assets\profile-images\Ellipse -7.png"></label> -->
+                    <br>
+               <!-- UC 4 -->
+                    <label class="label text" for="gender" style ="margin-right: 10px;" id ="gender">Gender </label>
+                    <input class=" text " style ="margin-left: -5px;" type="radio"  value="male" name ="gender" id ="maleGender" > 
+                    <label style =" font-size: 14px; color: #42515f;opacity: 1;font-family: Roboto;margin-left: 0px;" class ="gender" for ="gender">Male </label>     
+                    <input class=" text " type="radio" value="female" name ="gender" id ="femaleGender" > 
+                    <label style =" font-size: 14px; color: #42515f;opacity: 1;font-family: Roboto;" class ="gender" for ="gender">Female </label><br>
+                    
+                    <label class="label text"  for="Dept">Department</label>
+                    <input type="checkbox" id="Dept1" name="Dept" value="Hr">
+                    <label  class ="Dept" for="Dept"> HR </label>
+                    <input type="checkbox" id="Dept2" name="Dept" value="Sales">
+                    <label class ="Dept" for="Dept"> Sales </label>
+                    <input type="checkbox" id="Dept3" name="Dept" value="Finance">
+                    <label class ="Dept" for="Dept"> Finance </label>
+                    <input type="checkbox" id="Dept3" name="Dept" value="Engineer">
+                    <label class ="Dept" for="Dept"> Engineer </label>
+                    <input type="checkbox" id="Dept4" name="Dept" value="Others">
+                    <label class ="Dept" for="Dept"> Others </label><br>
+
+                     <!--Adding Salary range to the form-->
+                <div class="row-content">
+                    <label class="label text" for="salary">Choose Your Salary: </label>
+                    <input class="input" type="range" name="salary"  id="salary" min="300000" max="500000" step="100" value="400000" >
+                    <output class="salary-output text"></output>
+                    <p id="displaySalary"></p>
+                    <!-- <script>
+                        function myFunction() {
+                          var x = document.getElementById("salary").value;
+                          document.getElementById("displaySalary").innerHTML = x;
+                        }
+                    </script> -->
+                </div>
+                <!--UC5 payroll form with start date-->
+                <div class="row-content">
+                    <label class="label text" for="startDate">Start Date</label>
+                    <div>
+                        <select id="day" name="Day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select id="month" name="Month">
+                            <option value="Jan">January</option>
+                            <option value="Feb">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="Aug">August</option>
+                            <option value="Sept">September</option>
+                            <option value="Oct">October</option>
+                            <option value="Nov">November</option>
+                            <option value="Dec">December</option>
+                        </select>
+                        <select id="year" name="Year">
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                        </select>
+                    </div>
+                </div>
+                 <!-- UC6 -->
+                <div class="row-content">
+                    <label class="label text" for="notes">Notes</label>
+                    <textarea id="notes" class="input" name="Notes" style="height:100px"></textarea>
+                </div>
+                <div class="buttonParent">
+                    <a href="./home.html" class="button cancelButton">Cancel</a>
+                    <div class="submit-reset">
+                        <button type="submit" class="button subitButton" id="submitButton" onclick="validate()"  >Submit</button>
+                        <button type="reset" class="button resetButton" >Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
